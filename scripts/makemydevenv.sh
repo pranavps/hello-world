@@ -6,6 +6,13 @@ set -eux
 # vim
 # "Development tools"
 yum groupinstall "Development Tools"
+yum -y install yum-utils
+yum -y groupinstall development
+yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+yum -y install python36u
+python3.6 -V
+yum -y install python36u-pip
+yum -y install python36u-devel
 
 # python
 wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz
